@@ -30,7 +30,7 @@ export class convertNumber {
                 bottom += convertTable[digit][2];
             }
 
-        console.log(top + "\n" + middle + "\n" + bottom);
+
         return top + "\n" + middle + "\n" + bottom;
 
     }

@@ -11,6 +11,7 @@ describe('Numbers to LCD', () => {
         expect(convertNumber.convert(12)).toBe("    _ \n  | _|\n  ||_ ");
     });
     it('should take number 789 and return LCD 789', () => {
+        console.log(convertNumber.convert(789));
         expect(convertNumber.convert(789)).toBe(" _  _  _ \n  ||_||_|\n  ||_|  |");
     });
 });
