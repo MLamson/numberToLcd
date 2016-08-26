@@ -1,9 +1,6 @@
+
 export class convertNumber {
     static convert(input: any): string {
-
-        let top: string = "";
-        let middle: string = "";
-        let bottom: string = "";
 
         let convertTable: any = {
             1: ["   ",
@@ -11,14 +8,30 @@ export class convertNumber {
                 "  |"],
             2: [" _ ",
                 " _|",
-                "|_ "]
+                "|_ "],
+            7: [" _ ",
+                "  |",
+                "  |"],
+            8: [" _ ",
+                "|_|",
+                "|_|"],
+            9: [" _ ",
+                "|_|",
+                "  |"]
         }
-                for (let digit of input.toString()) {
-                    top += convertTable[digit][0];
-                    middle += convertTable[digit][1];
-                    bottom += convertTable[digit][2];
-                }
 
+        let top: string = "";
+        let middle: string = "";
+        let bottom: string = "";
+
+            for (let digit of input.toString()) {
+                top += convertTable[digit][0];
+                middle += convertTable[digit][1];
+                bottom += convertTable[digit][2];
+            }
+
+        console.log(top + "\n" + middle + "\n" + bottom);
         return top + "\n" + middle + "\n" + bottom;
+
     }
 }
